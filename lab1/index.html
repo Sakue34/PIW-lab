@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PIW lab1</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+        <style>
+            :root {
+                background-color: aliceblue;
+                --rotating-box-color: rgb(126, 5, 29);
+                --moving-box-color: rgb(91, 197, 211);
+            }
+
+            .rotating-box {
+                width: 100px;
+                height: 100px;
+                margin: auto;
+                background: var(--rotating-box-color, crimson);
+                animation-duration: 3s;
+                animation-name: rotation;
+                animation-iteration-count: infinite;
+            }
+
+            @keyframes rotation {
+                0% {
+                    transform: rotate(0deg);
+                }
+                80% {
+                    transform: rotate(180deg);
+                }
+            }
+
+            .moving-box {
+                width: 100px;
+                height: 100px;
+                margin: auto;
+                background: var(--moving-box-color, blue);
+                animation-duration: 3s;
+                animation-name: moving;
+                animation-iteration-count: infinite;
+            }
+
+            @keyframes moving {
+                20% {
+                    transform: translate(100px, 0px);
+                }
+                50% {
+                    transform: rotate(180deg);
+                }
+                80% {
+                    transform: translate(-150px, -100px);
+                }
+            }
+
+            .fancy-text {
+                font-family: "Audiowide", sans-serif;
+                color: slategrey;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <h1 class="fancy-text">Testowa strona stworzona z wykorzystaniem podstaw HTML i CSS</h1>
+        <p style="font-size: large;">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam tempora suscipit exercitationem repellendus, distinctio quaerat nostrum natus error voluptas rerum atque voluptates itaque, eum quos est reprehenderit! Ipsam, cupiditate vero?
+        </p>
+        <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="Zdjęcie kota">
+        <img src="https://i0.wp.com/cdn-prod.medicalnewstoday.com/content/images/articles/322/322868/golden-retriever-puppy.jpg?w=1575" alt="Zdjęcie psa" style="height: 280px;">
+        <div>
+            <form action="#">
+                <p>Wybierz wszystkie słowa, które wywołują w tobie pozytywne emocje:</p>
+                <label for="sałatka"><input id="sałatka" type="checkbox" name="positive-things" value="sałatka">Sałatka</label></li>
+                <label for="uczelnia"><input id="uczelnia" type="checkbox" name="positive-things" value="uczelnia">Uczelnia</label>
+                <label for="brzmienie"><input id="brzmienie" type="checkbox" name="positive-things" value="brzmienie">Brzmienie</label>
+                <label for="topór"><input id="topór" type="checkbox" name="positive-things" value="topór">Topór</label>
+                <label for="hulajnoga"><input id="hulajnoga" type="checkbox" name="positive-things" value="hulajnoga">Hulajnoga</label>
+                <label for="siódemka"><input id="siódemka" type="checkbox" name="positive-things" value="siódemka">Siódemka</label>
+                <label for="dysocjacja"><input id="dysocjacja" type="checkbox" name="positive-things" value="dysocjacja">Dysocjacja</label>
+                <label for="balustrada"><input id="balustrada" type="checkbox" name="positive-things" value="balustrada">Balustrada</label>
+                <label for="powtarzalność"><input id="powtarzalność" type="checkbox" name="positive-things" value="powtarzalność">Powtarzalność</label>
+                <p>Wybierz swoje ulubione zwierzę:</p>
+                <label for="kot"><input id="kot" type="radio" name="favourite-animal">Kot</label>
+                <label for="pies"><input id="pies" type="radio" name="favourite-animal">Pies</label>
+                <label for="panda"><input id="panda" type="radio" name="favourite-animal">Panda</label>
+                <label for="tygrys"><input id="tygrys" type="radio" name="favourite-animal">Tygrys</label>
+                <p>
+                    <input type="text" placeholder="podaj swoje imię">
+                    <button type="submit">Wyślij</button>
+                </p>
+            </form>
+        </div>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque laboriosam ipsa esse a architecto nulla quibusdam et provident sit suscipit tempora, optio numquam excepturi! Deserunt vel neque dolor distinctio atque!
+        </p>
+        <a href="https://www.wikipedia.org" target="_blank">Wejdź w ten link, aby dowiedzieć się więcej o świecie!</a>
+        <p><div class="rotating-box"></div></p>
+        <p><div class="moving-box"></div></p>
+    </body>
+</html>
