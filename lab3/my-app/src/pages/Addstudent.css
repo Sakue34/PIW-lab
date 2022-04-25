@@ -1,0 +1,11 @@
+.form__items {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: auto;
+}
+
+.submit__label {
+    margin: auto;
+    width: 0%;
+}
