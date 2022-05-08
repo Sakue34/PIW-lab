@@ -1,74 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home'
 import Addstudent from './pages/Addstudent';
 import Findgroup from './pages/Findgroup';
+import axios from 'axios';
 
 function App() {
-  const [people, setPeople] = useState([
-    {
-      name: 'Test Testowski',
-      email: 'test1@gmail.com',
-      description: 'Jestem zaradnym studentem',
-      tags: 'C++',
-      courses: 'Analiza matematyczna 2',
-    },
-    {
-      name: 'Brian Testowski',
-      email: 'test2@gmail.com',
-      description: 'Jestem zmotywowanym studentem',
-      tags: 'C#',
-      courses: 'Analiza matematyczna 2',
-    },
-    { 
-      name: 'Elżbieta Elizejska',
-      email: 'test3@gmail.com',
-      description: 'Jestem śmieszną studentką',
-      tags: 'Python',
-      courses: 'Architektura komputerów 1',
-    }
-  ]);
+  const [people, setPeople] = useState([]);
 
   const addPerson = (person) => {
     setPeople([...people, person]);
   };
 
-  const [groups, setGroups] = useState([
-    {
-      name: 'Klon tindera dla studentów i projektów',
-      members: 'Test Testowski, Adam Adamowski, Andrzej Andrzejewski',
-      description: 'Klon Tindera, tylko takiego dla studentów i grup poszukujących ludzi do projektów.',
-      tags: 'React.js',
-      courses: 'Programowanie Interfejsów Webowych',
-    },
-    {
-      name: 'Antywirus dla smartfonów z systemem Android',
-      members: 'Anastazja Trąba, Alojzy Fortepian',
-      description: 'Szukamy ludzi do projektu, fajnie jakby znalazł się ktoś kto napisał w życiu jakiegoś antywirusa',
-      tags: 'Java 11',
-      courses: 'Projektowanie Interfejsów Mobilnych',
-    },
-    {
-      name: 'Testowa grupa projektowa',
-      members: 'Szczepan Szczepanowski',
-      description: 'Działa?',
-      tags: 'C++',
-      courses: 'Projektowanie Efektywnych Algorytmów',
-    },
-    {
-      name: 'Kolejna testowa grupa projektowa',
-      members: 'Adam Kowalski',
-      description: 'Przykładowy, testowy opis',
-      tags: 'C++',
-      courses: 'Projektowanie Efektywnych Algorytmów',
-    },
-  ]);
+  const [groups, setGroups] = useState([]);
 
   const addGroup = (group) => {
     setGroups([...groups, group]);
   };
+
+  useEffect(() => {
+    axios.get("http://localhost:3000/data/people.json")
+    .then(res => {
+      const people = res.data.map(person => person);
+      setPeople(people);
+    });
+    axios.get("http://localhost:3000/data/groups.json")
+    .then(res => {
+      const groups = res.data.map(group => group);
+      setGroups(groups);
+    });
+      }, [])
 
   return (
     <div className='App'>

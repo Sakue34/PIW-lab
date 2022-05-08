@@ -1,0 +1,30 @@
+[
+    {
+      "name": "Klon tindera dla studentów i projektów",
+      "members": "Test Testowski, Adam Adamowski, Andrzej Andrzejewski",
+      "description": "Klon Tindera, tylko takiego dla studentów i grup poszukujących ludzi do projektów.",
+      "tags": "React.js",
+      "courses": "Programowanie Interfejsów Webowych"
+    },
+    {
+      "name": "Antywirus dla smartfonów z systemem Android",
+      "members": "Anastazja Trąba, Alojzy Fortepian",
+      "description": "Szukamy ludzi do projektu, fajnie jakby znalazł się ktoś kto napisał w życiu jakiegoś antywirusa",
+      "tags": "Java 11",
+      "courses": "Projektowanie Interfejsów Mobilnych"
+    },
+    {
+      "name": "Testowa grupa projektowa",
+      "members": "Szczepan Szczepanowski",
+      "description": "Działa?",
+      "tags": "C++",
+      "courses": "Projektowanie Efektywnych Algorytmów"
+    },
+    {
+      "name": "Kolejna testowa grupa projektowa",
+      "members": "Adam Kowalski",
+      "description": "Przykładowy, testowy opis",
+      "tags": "C++",
+      "courses": "Projektowanie Efektywnych Algorytmów"
+    }
+  ]
