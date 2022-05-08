@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './Addstudent.css';
+import UserContext from '../contexts/UserContext';
 
 const Addstudent = (props) => {
+    const [user] = useContext(UserContext);
     const {addPerson} = props;
 
     const [newPerson, setNewPerson] = useState("");
@@ -17,6 +19,14 @@ const Addstudent = (props) => {
         addPerson(newPerson);
         alert('Dodawanie zgłoszenia zakończone powodzeniem');
         setNewPerson("");
+    }
+
+    if (!user) {
+        return (
+            <div>
+                <p>Zaloguj się aby dodać swoje ogłoszenie!</p>
+            </div>
+        )
     }
 
     return (
@@ -36,6 +46,7 @@ const Addstudent = (props) => {
                         type="text" 
                         name="email"
                         value={newPerson.email || ""}
+                        placeholder={user.email}
                         onChange={handleChange}
                     />
                 </label>

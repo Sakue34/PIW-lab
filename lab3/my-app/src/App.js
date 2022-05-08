@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import './App.css';
@@ -53,6 +53,13 @@ function App() {
       email: 'admin@gmail.com',
       picture: 'https://i.picsum.photos/id/466/100/100.jpg?hmac=15Hjzs5oHgFaNN41Kurw7PjUxX-7Bkg6Macv3z2p47c',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Something. Something. Something. Something.'
+    },
+    {
+      username: 'szybki_zenek14',
+      password: 'zenek',
+      email: 'zenek@gmail.com',
+      picture: 'https://i.picsum.photos/id/573/100/100.jpg?hmac=dn3nqHiFTZBs2oDA_rTWR3vxzqMeMb4P4g191-xIZR8',
+      description: 'Aenean fermentum magna quis libero auctor, ornare aliquet nulla bibendum. Quisque facilisis, leo eu consequat tempor, mauris erat tristique justo, sed mollis ex ipsum in ante. Maecenas vitae egestas turpis. Maecenas quis nunc consequat, porttitor nisl eu, feugiat est. Nulla eu eros lacus. Ut ornare eleifend pellentesque.'
     }
   ]);
 
@@ -83,7 +90,5 @@ function App() {
     </div>
   );
 }
-
-//<Route path='/user' element={<User users={users}/>} />
 
 export default App;
