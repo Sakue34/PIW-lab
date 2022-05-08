@@ -1,0 +1,9 @@
+.userlist__list {
+    position: relative;
+    width: auto;
+    padding: 30px;
+    margin: auto;
+    max-width: 80vw;
+    height: auto;
+    background-color: #f9f9f9;
+}
